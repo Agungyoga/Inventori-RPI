@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Inventori RPI</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Agung Yoga</string>
+    <string name="nav_header_subtitle">agungyoga373@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    //bottom menu
+    <string name="title_home">Home</string>
+    <string name="title_rusak">Barang Rusak</string>
+    <string name="title_peminjam">Peminjam</string>
+    <string name="title_pinjam">Barang diPinjam</string>
+</resources>
