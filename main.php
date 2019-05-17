@@ -118,9 +118,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div id="myTabContent" class="tab-content">
 								<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
 									<div class="tabcontent-grids">
-										<form action="#" method="post">
-											<input type="search" name="Search" placeholder="Cari Barang..." required="">
-											<button type="submit" class="btn btn-default" aria-label="Left Align">
+										<form action="" method="post">
+											<input type="search" name="search" placeholder="Cari Barang..." required="">
+											<button type="submit" name="cariData"class="btn btn-default" aria-label="Left Align">
 												<span class="glyphicon glyphicon-search"></span>
 											</button>
 										</form>
@@ -134,11 +134,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- properties -->
 				
 				<div class="w3agile gallery"> 
-					<h3 class="w3ls-title">Data Barang</h3> 
+					<h3 class="w3ls-title">Data Barang</h3>
+					<?php 
+					if (isset($_POST['cariData'])) {
+						$ambil = $koneksi->query("SELECT * FROM barang WHERE nama like '%$_POST[search]%'");
+					}else if (@$_GET['Kategori']) {
+						if ($_GET['Kategori']=="Hardwere") {
+							$ambil = $koneksi->query("SELECT * FROM barang WHERE kategori='Hardwere'");
+						}else{
+							$ambil = $koneksi->query("SELECT * FROM barang WHERE kategori='Mekanik'");
+						}
+					}
+					else{
+						$ambil = $koneksi->query("SELECT * FROM barang");
+					}
+					?>
 					<div class="gallery-row"> 
 						<?php 
 						$ambil = $koneksi->query("SELECT * FROM barang");
-						$nama = $koneksi->query("SELECT nama from barang");
 						while($perbarang = $ambil->fetch_assoc()){ 
 							?>
 						<div class="gallery-grids">
@@ -154,56 +167,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 						</div>
 						<?php } ?>
-						<div class="gallery-grids">
-							<div class="w3ls-hover">
-								<a href="images/ab.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley">
-									<img src="" class="img-responsive zoom-img" alt=""/>
-									<div class="view-caption">
-										<h5>View+</h5> 
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="gallery-grids">
-							<div class="w3ls-hover">
-								<a href="images/g3.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley">
-									<img src="images/g3.jpg" class="img-responsive zoom-img" alt=""/>
-									<div class="view-caption">
-										<h5>View+</h5> 
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="gallery-grids">
-							<div class="w3ls-hover">
-								<a href="images/g4.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley">
-									<img src="images/g4.jpg" class="img-responsive zoom-img" alt=""/>
-									<div class="view-caption">
-										<h5>View+</h5> 
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="gallery-grids">
-							<div class="w3ls-hover">
-								<a href="images/g5.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley">
-									<img src="images/g5.jpg" class="img-responsive zoom-img" alt=""/>
-									<div class="view-caption">
-										<h5>View+</h5> 
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="gallery-grids">
-							<div class="w3ls-hover">
-								<a href="images/g6.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley">
-									<img src="images/g6.jpg" class="img-responsive zoom-img" alt=""/>
-									<div class="view-caption">
-										<h5>View+</h5> 
-									</div>
-								</a>
-							</div>
-						</div>
+						
 						<div class="clearfix"> </div>
 					</div>
 					<!--  light box js -->
