@@ -4,6 +4,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php include'koneksi.php'?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -131,23 +132,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div> 
 				<!-- //welcome -->
 				<!-- properties -->
+				
 				<div class="w3agile gallery"> 
 					<h3 class="w3ls-title">Data Barang</h3> 
 					<div class="gallery-row"> 
+						<?php 
+						$ambil = $koneksi->query("SELECT * FROM barang");
+						$nama = $koneksi->query("SELECT nama from barang");
+						while($perbarang = $ambil->fetch_assoc()){ 
+							?>
 						<div class="gallery-grids">
 							<div class="w3ls-hover">
-								<a href="images/g1.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley">
-									<img src="images/g1.jpg" class="img-responsive zoom-img" alt=""/>
+								<a href="" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley">
+										<img src="images/<?php echo $perbarang['foto']; ?>" class="img-responsive zoom-img" alt=""/>
+										<h4> <?php echo $perbarang['nama']; ?></h4>
+										<h4>Stok : <?php echo $perbarang['stok']; ?></h4>
 									<div class="view-caption">
 										<h5>View+</h5> 
 									</div>
 								</a>
 							</div>
 						</div>
+						<?php } ?>
 						<div class="gallery-grids">
 							<div class="w3ls-hover">
-								<a href="images/g2.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley">
-									<img src="images/g2.jpg" class="img-responsive zoom-img" alt=""/>
+								<a href="images/ab.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley">
+									<img src="" class="img-responsive zoom-img" alt=""/>
 									<div class="view-caption">
 										<h5>View+</h5> 
 									</div>

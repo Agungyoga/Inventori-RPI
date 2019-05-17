@@ -61,73 +61,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="login">
 					<a href="#small-dialog" class="sign-in popup-top-anim"><span class="glyphicon glyphicon-user"></span></a> 
 					<!-- modal -->
-					<div id="small-dialog" class="mfp-hide">
-						<div class="login-modal"> 	
-							<div class="booking-info">
-								<h3><a href="main.php">Fortune Estates</a></h3>
-							</div>
-							<div class="login-form">
-								<form action="#" method="post">
-									<div class="styled-input">
-										<input type="text" name="Username" required=""/>
-										<label>Username</label>
-										<span></span>
-									</div>
-									<div class="styled-input">
-										<input type="password" name="Password" required=""> 
-										<label>Password</label>
-										<span></span>
-									</div> 
-									<div class="wthree-text"> 
-										<ul> 
-											<li>
-												<input type="checkbox" id="brand" value="">
-												<label for="brand"><span></span> Remember me ?</label>  
-											</li>
-											<li> <a href="#">Forgot password?</a> </li>
-										</ul>
-										<div class="clear"> </div>
-									</div> 
-									<input type="submit" value="Sign In">		
-								</form>
-								<p>Don’t have an account ?<a href="#small-dialog1" class="sign-in popup-top-anim"> Sign Up</a></p>
-							</div> 
-						</div>
-					</div>
-					<!-- //modal --> 
-					<!-- modal-two -->
-					<div id="small-dialog1" class="mfp-hide">
-						<div class="login-modal">  
-							<div class="booking-info">
-								<h3><a href="main.html">Fortune Estates</a></h3>
-							</div>
-							<div class="login-form signup-form">
-								<form action="#" method="post">
-									<div class="styled-input">
-										<input type="text" name="Username" required=""/>
-										<label>Username</label>
-										<span></span>
-									</div>
-									<div class="styled-input">
-										<input type="text" name="email" required=""/>
-										<label>Email</label>
-										<span></span>
-									</div>
-									<div class="styled-input">
-										<input type="password" name="Password" required=""> 
-										<label>Password</label>
-										<span></span>
-									</div>  
-									<div class="wthree-text"> 
-										<input type="checkbox" id="brand1" value="">
-										<label for="brand1"><span></span>I accept the terms of use</label> 
-									</div>
-									<input type="submit" value="Sign Up">		
-								</form> 
-							</div> 
-						</div>
-					</div>
-					<!-- //modal-two --> 
+					 
 				</div> 
 				<div class="clearfix"> </div>
 			</div>
@@ -144,72 +78,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<p class="w3-text">Lorem ipsum dolor sit amet consectetur adip iscing elit. Nam vestibulum ipsum quis purus varius efficitur nunc eget purus ac risus facilisis.</p>
 				</div>
 				<!-- services -->
-				<div class="services"> 
-					<div class="title">
-						<h3 class="w3ls-title">Services</h3> 
-					</div>
-					<div class="services-w3ls-row">
-						<div class="services-grid">
-							<span class="glyphicon glyphicon-home effect-1" aria-hidden="true"></span>
-							<h5>Cum soluta nobis</h5>
-							<p>Itaque earum rerum hic a sapiente delectus</p>
-						</div>
-						<div class="services-grid">
-							<span class="glyphicon glyphicon-list-alt effect-1" aria-hidden="true"></span>
-							<h5>Soluta vum nobis</h5>
-							<p>Itaque earum rerum hic a sapiente delectus</p>
-						</div>
-						<div class=" services-grid">
-							<span class="glyphicon glyphicon-tree-deciduous effect-1" aria-hidden="true"></span>
-							<h5>Nobis cum soluta</h5>
-							<p>Itaque earum rerum hic a sapiente delectus</p>
-						</div>
-						<div class="services-grid">
-							<span class="glyphicon glyphicon-globe effect-1" aria-hidden="true"></span>
-							<h5>Soluta nobis cum </h5>
-							<p>Itaque earum rerum hic a sapiente delectus</p>
-						</div>  
-						<div class="clearfix"> </div>
-					</div>   
-				</div>
-				<!-- //services -->
-				<div class="about"> 
-					<h3 class="w3ls-title">Why Choose Us</h3> 
-					<ul>
-						<li><span class="glyphicon glyphicon-menu-right"></span> Sed tincidunt lorem sed </li>
-						<li><span class="glyphicon glyphicon-menu-right"></span> Excepteur sint occaecat </li>
-						<li><span class="glyphicon glyphicon-menu-right"></span> Duis aute irure dolor in </li>
-						<li><span class="glyphicon glyphicon-menu-right"></span> Sed tincidunt lorem sed </li>
-						<li><span class="glyphicon glyphicon-menu-right"></span> Excepteur sint occaecat </li>
-						<li><span class="glyphicon glyphicon-menu-right"></span> Duis aute irure dolor in </li>
-					</ul>
-				</div>
-				<!-- brands -->
-				<div class="w3agile brands"> 
-					<h3 class="w3ls-title">Our Clients</h3> 
-					<div class="brands-info">
-						<div class="brand-grids">
-							<a href="#"><img src="images/b1.jpg" alt=""/></a>
-						</div>
-						<div class="brand-grids">
-							<a href="#"><img src="images/b2.jpg" alt=""/></a>
-						</div>
-						<div class="brand-grids">
-							<a href="#"><img src="images/b3.jpg" alt=""/></a>
-						</div>
-						<div class="brand-grids">
-							<a href="#"><img src="images/b4.jpg" alt=""/></a>
-						</div>
-						<div class="brand-grids">
-							<a href="#"><img src="images/b5.jpg" alt=""/></a>
-						</div>
-						<div class="brand-grids">
-							<a href="#"><img src="images/b6.jpg" alt=""/></a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-				<!-- //brands -->
+				
 				<!-- footer -->
 				<?php include 'footer.php' ?>
 			</div>

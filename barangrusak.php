@@ -49,6 +49,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<h3>Trush</h3>   
 					</div> 
 				</div>
+				<br>
 				<!-- //banner -->
 				<div id="myTabContent" class="tab-content">
 					<div class="welcome-info">

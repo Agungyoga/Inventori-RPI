@@ -139,10 +139,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div> 
 				</div>
 				<!-- //banner -->
-				<!-- properties --> 
-				<div class="w3agile properties"> 
+				<div class="welcome"> 
 					<h3 class="w3ls-title">Tracking Barang</h3> 
 					<p class="w3-text">Tracking barang adalah menu untuk memonitori barang yang dipinjam dan siapa yang minjam barang.</p>
+					<div class="welcome-info">
+						<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+							
+							<div class="clearfix"> </div>
+							<div id="myTabContent" class="tab-content">
+								<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+									<div class="tabcontent-grids">
+										<form action="#" method="post">
+											<input type="search" name="Search" placeholder="Cari Barang..." required="">
+											<button type="submit" class="btn btn-default" aria-label="Left Align">
+												<span class="glyphicon glyphicon-search"></span>
+											</button>
+										</form>
+									 </div>
+								</div>
+							</div>  
+						</div>  
+					</div>  	
+				</div> 
+				<!-- properties --> 
+				<div class="w3agile properties"> 
 					<div class="latest-w3lsrow"> 
 						<div class="latest-grids">  
 							<div class="latest-grids-image">

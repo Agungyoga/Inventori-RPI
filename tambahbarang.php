@@ -4,6 +4,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php include 'koneksi.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,73 +62,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="login">
 					<a href="#small-dialog" class="sign-in popup-top-anim"><span class="glyphicon glyphicon-user"></span></a> 
 					<!-- modal -->
-					<div id="small-dialog" class="mfp-hide">
-						<div class="login-modal"> 	
-							<div class="booking-info">
-								<h3><a href="main.php">Fortune Estates</a></h3>
-							</div>
-							<div class="login-form">
-								<form action="#" method="post">
-									<div class="styled-input">
-										<input type="text" name="Username" required=""/>
-										<label>Username</label>
-										<span></span>
-									</div>
-									<div class="styled-input">
-										<input type="password" name="Password" required=""> 
-										<label>Password</label>
-										<span></span>
-									</div> 
-									<div class="wthree-text"> 
-										<ul> 
-											<li>
-												<input type="checkbox" id="brand" value="">
-												<label for="brand"><span></span> Remember me ?</label>  
-											</li>
-											<li> <a href="#">Forgot password?</a> </li>
-										</ul>
-										<div class="clear"> </div>
-									</div> 
-									<input type="submit" value="Sign In">		
-								</form>
-								<p>Don’t have an account ?<a href="#small-dialog1" class="sign-in popup-top-anim"> Sign Up</a></p>
-							</div> 
-						</div>
-					</div>
-					<!-- //modal --> 
-					<!-- modal-two -->
-					<div id="small-dialog1" class="mfp-hide">
-						<div class="login-modal">  
-							<div class="booking-info">
-								<h3><a href="main.php">Fortune Estates</a></h3>
-							</div>
-							<div class="login-form signup-form">
-								<form action="#" method="post">
-									<div class="styled-input">
-										<input type="text" name="Username" required=""/>
-										<label>Username</label>
-										<span></span>
-									</div>
-									<div class="styled-input">
-										<input type="text" name="email" required=""/>
-										<label>Email</label>
-										<span></span>
-									</div>
-									<div class="styled-input">
-										<input type="password" name="Password" required=""> 
-										<label>Password</label>
-										<span></span>
-									</div>  
-									<div class="wthree-text"> 
-										<input type="checkbox" id="brand1" value="">
-										<label for="brand1"><span></span>I accept the terms of use</label> 
-									</div>
-									<input type="submit" value="Sign Up">		
-								</form> 
-							</div> 
-						</div>
-					</div>
-					<!-- //modal-two --> 
+					
 				</div> 
 				<div class="clearfix"> </div>
 			</div>
@@ -141,55 +76,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- //banner -->
 				<!-- contact -->
 				<div class="w3agile contact"> 
-					<h3 class="w3ls-title">Get In Touch</h3>
+					<h3 class="w3ls-title">Tambah Barang</h3>
 					<div class="contact-form"> 
-						<form action="#" method="post">
-							<input type="text" name="Name" placeholder="Name" required="">
-							<input type="text" name="Email" placeholder="Email" required="">
-							<input type="text" name="Subject" placeholder="Subject" required="">
-							<textarea name="Message" placeholder="Message" required=""></textarea>
-							<input type="submit" value="SEND">
+						<form method="post" enctype="multipart/form-data">
+							<input type="text" name="nama" placeholder="Nama Barang" required="">
+							<div class="form-group">
+								<select name="kategori" class="form-control form-control-lg">
+									<option selected>Pilih Kategori</option>
+									<option>Hardware</option>
+									<option>Mekanik</option>
+								</select>
+							</div>
+							<div>
+								<input type="number" class="form-control" name="stok" placeholder="Stok">
+							</div><br>
+							<div>
+								<label>Foto</label>
+								<input type="file" class="form-control" name="foto">
+							</div><br>
+							<input type="submit" name="save" value="Simpan">
 						</form> 
+						<?php
+						if (isset($_POST['save'])){
+
+							$nama = $_FILES['foto']['name'];
+							$lokasi =$_FILES['foto']['tmp_name'];
+							move_uploaded_file($lokasi, "images/$nama");
+
+							$koneksi->query("INSERT INTO barang (nama,stok,kategori,foto) VALUES('$_POST[nama]','$_POST[stok]','$_POST[kategori]','$nama')");
+
+							echo "<script>alert('Barang Berhasil Ditambahkan');</script>";
+					}
+						?>
+
 					</div>
-					<div class="map"> 
-						<h3 class="w3ls-title">Route Map</h3>
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.9940307!3d40.719109700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1441710758555" allowfullscreen></iframe>
-					</div>
-					<div class="contact-form"> 
-						<h3 class="w3ls-title">Contact Info</h3>
-						<p><b>Address :</b> Lorem St, NY 10002, Canada. </p>
-						<p><b>Telephone :</b> (2345) 111 222 3333</p>
-						<p><b>Fax :</b> (1234) 888 8884</p>
-						<p><b>Email :</b> <a href="mailto:example@mail.com">mail@example.com</a></p>
-					</div>
-				</div>
-				<!-- //contact --> 
-				<!-- brands -->
-				<div class="w3agile brands"> 
-					<h3 class="w3ls-title">Our Clients</h3> 
-					<div class="brands-info">
-						<div class="brand-grids">
-							<a href="#"><img src="images/b1.jpg" alt=""/></a>
-						</div>
-						<div class="brand-grids">
-							<a href="#"><img src="images/b2.jpg" alt=""/></a>
-						</div>
-						<div class="brand-grids">
-							<a href="#"><img src="images/b3.jpg" alt=""/></a>
-						</div>
-						<div class="brand-grids">
-							<a href="#"><img src="images/b4.jpg" alt=""/></a>
-						</div>
-						<div class="brand-grids">
-							<a href="#"><img src="images/b5.jpg" alt=""/></a>
-						</div>
-						<div class="brand-grids">
-							<a href="#"><img src="images/b6.jpg" alt=""/></a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-				<!-- //brands -->
+					<br>
 				<!-- footer -->
 				<?php include 'footer.php' ?>
 			</div>
@@ -209,7 +130,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			$("#div1").php($("#div1").php()+' '+nice.version);
 		
 			$("#boxscroll").niceScroll({cursorborder:"",cursorcolor:"#00F",boxzoom:true}); // First scrollable DIV
-		});
+		});<br>
 	</script>
 	<!-- //nicescroll-js -->
 	<!-- Bootstrap core JavaScript
