@@ -51,86 +51,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<button class="close-button" id="close-button">C</button>
 		</div> 
 		<div class="content-wrap">
-			<div class="header"> 
-				<div class="menu-icon">   
-					<button class="menu-button" id="open-button">O</button>
-				</div>
-				<div class="logo">
-					<h2><a href="main.php">FE</a></h2>
-				</div>
-				<div class="login">
-					<a href="#small-dialog" class="sign-in popup-top-anim"><span class="glyphicon glyphicon-user"></span></a> 
-					<!-- modal -->
-					<div id="small-dialog" class="mfp-hide">
-						<div class="login-modal"> 	
-							<div class="booking-info">
-								<h3><a href="main.php">Fortune Estates</a></h3>
-							</div>
-							<div class="login-form">
-								<form action="#" method="post">
-									<div class="styled-input">
-										<input type="text" name="Username" required=""/>
-										<label>Username</label>
-										<span></span>
-									</div>
-									<div class="styled-input">
-										<input type="password" name="Password" required=""> 
-										<label>Password</label>
-										<span></span>
-									</div> 
-									<div class="wthree-text"> 
-										<ul> 
-											<li>
-												<input type="checkbox" id="brand" value="">
-												<label for="brand"><span></span> Remember me ?</label>  
-											</li>
-											<li> <a href="#">Forgot password?</a> </li>
-										</ul>
-										<div class="clear"> </div>
-									</div> 
-									<input type="submit" value="Sign In">		
-								</form>
-								<p>Don’t have an account ?<a href="#small-dialog1" class="sign-in popup-top-anim"> Sign Up</a></p>
-							</div> 
-						</div>
-					</div>
-					<!-- //modal --> 
-					<!-- modal-two -->
-					<div id="small-dialog1" class="mfp-hide">
-						<div class="login-modal">  
-							<div class="booking-info">
-								<h3><a href="main.php">Fortune Estates</a></h3>
-							</div>
-							<div class="login-form signup-form">
-								<form action="#" method="post">
-									<div class="styled-input">
-										<input type="text" name="Username" required=""/>
-										<label>Username</label>
-										<span></span>
-									</div>
-									<div class="styled-input">
-										<input type="text" name="email" required=""/>
-										<label>Email</label>
-										<span></span>
-									</div>
-									<div class="styled-input">
-										<input type="password" name="Password" required=""> 
-										<label>Password</label>
-										<span></span>
-									</div>  
-									<div class="wthree-text"> 
-										<input type="checkbox" id="brand1" value="">
-										<label for="brand1"><span></span>I accept the terms of use</label> 
-									</div>
-									<input type="submit" value="Sign Up">		
-								</form> 
-							</div> 
-						</div>
-					</div>
-					<!-- //modal-two --> 
-				</div> 
-				<div class="clearfix"> </div>
-			</div>
+			<!-- header -->
+			<?php include"header.php" ?>
+			<!-- header -->
+			<!-- bottom view -->
+			<?php include "bottomView.php"?>
+			<!-- bottom view -->
+
 			<div class="content">
 				<!-- banner -->
 				<div class="banner about-banner"> 
@@ -142,72 +69,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="welcome"> 
 					<h3 class="w3ls-title">Tracking Barang</h3> 
 					<p class="w3-text">Tracking barang adalah menu untuk memonitori barang yang dipinjam dan siapa yang minjam barang.</p>
-					<div class="welcome-info">
-						<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-							
-							<div class="clearfix"> </div>
-							<div id="myTabContent" class="tab-content">
-								<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
-									<div class="tabcontent-grids">
-										<form action="#" method="post">
-											<input type="search" name="Search" placeholder="Cari Barang..." required="">
-											<button type="submit" class="btn btn-default" aria-label="Left Align">
-												<span class="glyphicon glyphicon-search"></span>
-											</button>
-										</form>
-									 </div>
-								</div>
-							</div>  
-						</div>  
-					</div>  	
-				</div> 
-				<!-- properties --> 
+				</div>
+				<br>
+				<a href="addTracking.php"><img src="images/add.png" style="position: relative; left: 250px; width: 30px"></a>
+					<!-- properties --> 
 				<div class="w3agile properties"> 
-					<div class="latest-w3lsrow"> 
-						<div class="latest-grids">  
+					<div class="latest-w3lsrow">
+
+						<div class="latest-grids">
+						
 							<div class="latest-grids-image">
-								<img src="images/img3.jpg" alt="" />
-								<div class="latest-grids-description">
-									<h4><span class="glyphicon glyphicon-map-marker"></span> 25B St, Washington, USA </h4>
-									<h5>$300K</h5> 
-								</div> 
+								<img src="images/<?php echo $perbarang['foto']; ?>" alt="" />
 							</div> 
-							<h6>Sale</h6>
 							<div class="latest-grids-text">
 								<h5><a href="">Ecat vulputate Don</a></h5>
-								<p><b>Area :</b> 1,145 sq.ft </p>
-								<p><b>Bed Rooms :</b> 1 </p>
-							</div> 
-						</div>
-						<div class="latest-grids latest-grids-mdl">  
-							<div class="latest-grids-image">
-								<img src="images/img1.jpg" alt="" />
-								<div class="latest-grids-description">
-									<h4><span class="glyphicon glyphicon-map-marker"></span> Liberty 2St, Washington, USA </h4>
-									<h5>$300K</h5> 
-								</div> 
-							</div> 
-							<h6>Sale</h6>
-							<div class="latest-grids-text">
-								<h5><a href="">Ecat vulputate Don</a></h5>
-								<p><b>Area :</b> 2,145 sq.ft </p>
-								<p><b>Bed Rooms :</b> 2 </p>
-							</div> 
-						</div>
-						<div class="latest-grids">  
-							<div class="latest-grids-image">
-								<img src="images/img2.jpg" alt="" />
-								<div class="latest-grids-description">
-									<h4><span class="glyphicon glyphicon-map-marker"></span> 51C St, Washington, USA </h4>
-									<h5>$500</h5> 
-								</div> 
-							</div> 
-							<h6>Rent</h6>
-							<div class="latest-grids-text">
-								<h5><a href="">Ecat vulputate Don</a></h5>
-								<p><b>Area :</b> 3,145 sq.ft </p>
-								<p><b>Bed Rooms :</b> 3 </p>
-							</div> 
+								<p><b>Jumlah :</b>  </p>
+								<p><b>Nama Peminjam :</b>  </p>
+								<p><b>Kelas :</b>  </p>
+								<p><b>NIM :</b>  </p>
+								<p><b>No.HP :</b>  </p>
+							</div>
+							
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -217,6 +99,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- //brands -->
 				<!-- footer -->
 				<?php include 'footer.php' ?>
+				<br><br>
 			</div>
 		</div>
 	</div> 

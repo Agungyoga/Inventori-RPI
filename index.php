@@ -28,13 +28,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 	<div class="main-row">
-		<h1>Inventori Estates</h1>
+		<h1>Inventori RPI</h1>
 		<div class="main_frame">
 			<iframe class="frame-border scroll-pane" src="main.php" frameborder="0"></iframe>
 		</div>
 	</div>
 	<div class="copy-right">
-		<p>&copy; 2016 Fortune Estates . All Rights Reserved | Design by <a href="http://w3layouts.com" target="_blank">W3layouts</a></p>
+		<p>&copy; 2019 Robotika Polindra . All Rights Reserved | Created by TI.C</p>
 	</div>
 	<script src="js/jquery.nicescroll.min.js"></script> 
 	<script>

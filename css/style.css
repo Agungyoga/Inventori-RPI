@@ -4,6 +4,19 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+@media (max-width: 414px){
+.header {
+    padding: 1em 1.5em;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+.banner-img {
+    min-height: 240px;
+    margin-top: 10vh;
+}
+}
+
 body{
 	margin:0;
 	font-family: 'Roboto', sans-serif; 
@@ -88,7 +101,7 @@ body a:hover{
     width: 24%;
 }
 .header {
-    background: #8b008b;
+    background: #0044cc;
     padding: 1.2em 3em;
 }
 .menu-icon,.logo,.login{
@@ -133,7 +146,7 @@ body a:hover{
     color: #fff;
     border-bottom: 1px solid #FFF;
     text-transform: none;
-    background: #6b046b;
+    background: #2200cc;
     font-family: 'Abel', sans-serif;
 	-webkit-transform: translate3d(0,500px,0);
     -moz-transform: translate3d(0,500px,0);
@@ -163,7 +176,7 @@ ul.nav-sub li a {
     padding-left: 3.5em;
 }
 .top-nav li a:hover,.top-nav li a.active { 
-    background: #780278;
+    background: #2200cc;
 }
 .top-nav i.glyphicon {
     margin-right: 10px;
@@ -307,7 +320,7 @@ ul.nav-sub {
     z-index: 1001;
     width: 185px !important;
     height: 100% !important; 
-    background: #940494; 
+    background: #0044cc; 
     -webkit-transform: translate3d(-320px,0,0);
 	-moz-transform: translate3d(-320px,0,0);
 	-o-transform: translate3d(-320px,0,0);

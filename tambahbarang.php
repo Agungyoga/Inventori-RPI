@@ -52,25 +52,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<button class="close-button" id="close-button">C</button>
 		</div> 
 		<div class="content-wrap">
-			<div class="header"> 
+			<div class="header">
+
 				<div class="menu-icon">   
 					<button class="menu-button" id="open-button">O</button>
 				</div>
-				<div class="logo">
-					<h2><a href="main.php">FE</a></h2>
-				</div>
-				<div class="login">
-					<a href="#small-dialog" class="sign-in popup-top-anim"><span class="glyphicon glyphicon-user"></span></a> 
-					<!-- modal -->
-					
-				</div> 
 				<div class="clearfix"> </div>
 			</div>
 			<div class="content">
+			<!-- bottom view -->
+			<?php include "bottomView.php"?>
+			<!-- bottom view -->
 				<!-- banner -->
 				<div class="banner about-banner"> 
 					<div class="banner-img">  
-						<h3>Contact Us</h3>   
+						<h3>Add Barang</h3>   
 					</div> 
 				</div>
 				<!-- //banner -->
@@ -106,6 +102,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							$koneksi->query("INSERT INTO barang (nama,stok,kategori,foto) VALUES('$_POST[nama]','$_POST[stok]','$_POST[kategori]','$nama')");
 
 							echo "<script>alert('Barang Berhasil Ditambahkan');</script>";
+
 					}
 						?>
 

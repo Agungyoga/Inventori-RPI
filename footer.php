@@ -1,5 +1,5 @@
 <div class="w3agile footer"> 
-	<div class="social-icons">
+	<!-- <div class="social-icons fixed-bottom">
 		<ul>
 			<li><a href="#"> </a></li>
 			<li><a href="#" class="fb"> </a></li>
@@ -7,10 +7,10 @@
 			<li><a href="#" class="drb"> </a></li>
 		</ul>
 		<div class="clearfix"> </div>
-	</div>
+	</div> -->
 	<div class="footer-nav">
 		<ul>  
-			<li><a href="home.php"> Home </a></li>
+			<li><a href="detailbarang.php"> Home </a></li>
 			<li><a href="tracking.php"> Tracking </a> </li>
 			<li><a href="barangrusak.php"> Barang Rusak </a></li>
 			<li><a href="about.php"> About</a></li>

@@ -4,11 +4,13 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<?php include'koneksi.php'?>
+<?php include'koneksi.php'
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Fortune Estates a Mobile App Flat Bootstrap Responsive Website Template | Main :: W3layouts</title> 
+<title>Inventori RPI</title> 
 <!-- For-Mobile-Apps-and-Meta-Tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -53,18 +55,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<button class="close-button" id="close-button">C</button>
 		</div> 
 		<div class="content-wrap">
-			<div class="header"> 
+			<!-- header -->
+			<?php include"header.php" ?>
+			<!-- header -->
+			<!-- <div class="header"style="position: fixed;bottom: 0;"> 
 				<div class="menu-icon">   
-					<button class="menu-button" id="open-button">O</button>
+					<h3><a href="main.php"><span class="glyphicon glyphicon-list-alt" style="color: #e9edf2;"></span></a>Tracking</h3>
 				</div>
 				<div class="logo">
 					<h2><a href="main.php"><span class="glyphicon glyphicon-home"></span></a></h2>
 				</div>
 				<div class="login">
-					<a href="#small-dialog" class="sign-in popup-top-anim"><span class="glyphicon glyphicon-user"></span></a> 
+					<a href="#small-dialog" class="sign-in popup-top-anim"><span class="glyphicon glyphicon-exclamation-sign"></span></a> 
 				</div> 
 				<div class="clearfix"> </div>
-			</div>
+			</div> -->
 			<div class="content">
 				<!-- banner -->
 				<div class="banner">
@@ -74,20 +79,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<!-- First-Slide -->
 							<div class="item active">
 								<div class="banner-img"> 
-									<div class="carousel-caption kb_caption">
+									<div class="carousel-caption kb_caption kb_caption_left">
 									</div>
 								</div>
 							</div> 
 							<!-- Second-Slide -->
 							<div class="item">
-								<div class="banner-img banner-img1"> 
+								<img src="images/banner2.jpg" style="position: relative;top: 62px"> 
 									<div class="carousel-caption kb_caption kb_caption_right">
 									</div>
-								</div>
 							</div> 
 							<!-- Third-Slide -->
 							<div class="item">
-								<div class="banner-img banner-img2"> 
+								<img src="images/banner3.jpg" style="position: relative;top: 62px"> 
 									<div class="carousel-caption kb_caption kb_caption_center">
 									</div>
 								</div>
@@ -95,12 +99,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div> 
 						<!-- Left-Button -->
 						<a class="left carousel-control kb_control_left" href="#kb" role="button" data-slide="prev">
-							<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+							<span class="glyphicon glyphicon-menu-left"style="position: relative;top: 75px" aria-hidden="true"></span>
 							<span class="sr-only">Previous</span>
 						</a> 
 						<!-- Right-Button -->
 						<a class="right carousel-control kb_control_right" href="#kb" role="button" data-slide="next">
-							<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+							<span class="glyphicon glyphicon-menu-right" style="position: relative;top: 75px" aria-hidden="true"></span>
 							<span class="sr-only">Next</span>
 						</a> 
 					</div>
@@ -112,58 +116,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h3 class="w3ls-title">Welcome !</h3> 
 					<p class="w3title-text">Sed porta magna vitae nisl lacinia orbi malesuada sollic itudin tortor </p>
 					<div class="welcome-info">
-						<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-							
-							<div class="clearfix"> </div>
-							<div id="myTabContent" class="tab-content">
-								<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
-									<div class="tabcontent-grids">
-										<form action="" method="post">
-											<input type="search" name="search" placeholder="Cari Barang..." required="">
-											<button type="submit" name="cariData"class="btn btn-default" aria-label="Left Align">
-												<span class="glyphicon glyphicon-search"></span>
-											</button>
-										</form>
-									 </div>
-								</div>
-							</div>  
-						</div>  
+						
 					</div>  	
 				</div> 
 				<!-- //welcome -->
+				<!-- bottom view -->
+			<?php include "bottomView.php"?>
+			<!-- bottom view -->
 				<!-- properties -->
 				
-				<div class="w3agile gallery"> 
+				<div class="w3agile gallery">
+
 					<h3 class="w3ls-title">Data Barang</h3>
-					<?php 
-					if (isset($_POST['cariData'])) {
-						$ambil = $koneksi->query("SELECT * FROM barang WHERE nama like '%$_POST[search]%'");
-					}else if (@$_GET['Kategori']) {
-						if ($_GET['Kategori']=="Hardwere") {
-							$ambil = $koneksi->query("SELECT * FROM barang WHERE kategori='Hardwere'");
-						}else{
-							$ambil = $koneksi->query("SELECT * FROM barang WHERE kategori='Mekanik'");
-						}
-					}
-					else{
-						$ambil = $koneksi->query("SELECT * FROM barang");
-					}
-					?>
+					<a href="tambahbarang.php"><img src="images/add.png" style="position: relative; left: 250px; width: 30px"></a>
 					<div class="gallery-row"> 
+						
 						<?php 
-						$ambil = $koneksi->query("SELECT * FROM barang");
+						$ambil = $koneksi->query("SELECT * FROM barang ORDER BY id_barang DESC");
 						while($perbarang = $ambil->fetch_assoc()){ 
 							?>
 						<div class="gallery-grids">
+							<a href="detail.php?id=<?php echo $perbarang['id_barang']; ?>">
 							<div class="w3ls-hover">
-								<a href="" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley">
 										<img src="images/<?php echo $perbarang['foto']; ?>" class="img-responsive zoom-img" alt=""/>
 										<h4> <?php echo $perbarang['nama']; ?></h4>
 										<h4>Stok : <?php echo $perbarang['stok']; ?></h4>
-									<div class="view-caption">
-										<h5>View+</h5> 
-									</div>
-								</a>
+										<a href="detail.php?id=<?php echo $perbarang[id_barang]; ?>">
 							</div>
 						</div>
 						<?php } ?>
@@ -178,7 +156,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- brands -->
 				<!-- //brands -->
 				<!-- footer -->
+
 				<?php include 'footer.php' ?>
+				<br><br>
+
 			</div>
 		</div>
 	</div> 

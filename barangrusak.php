@@ -34,15 +34,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<button class="close-button" id="close-button">C</button>
 		</div> 
 		<div class="content-wrap">
-			<div class="header">
-
-				<div class="menu-icon">   
-					<button class="menu-button" id="open-button">O</button>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
+			<!-- header -->
+			<?php include"header.php" ?>
+			<!-- header -->
 			<div class="content"> 
-
+			<!-- bottom view -->
+			<?php include "bottomView.php"?>
+			<!-- bottom view -->
 				<!-- banner -->
 				<div class="banner about-banner"> 
 					<div class="banner-img">  
@@ -51,25 +49,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<br>
 				<!-- //banner -->
-				<div id="myTabContent" class="tab-content">
-					<div class="welcome-info">
-						<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-							
-							<div class="clearfix"> </div>
-							<div id="myTabContent" class="tab-content">
-								<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
-									<div class="tabcontent-grids">
-										<form action="#" method="post">
-											<input type="search" name="Search" placeholder="Cari Barang..." required="">
-											<button type="submit" class="btn btn-default" aria-label="Left Align">
-												<span class="glyphicon glyphicon-search"></span>
-											</button>
-										</form>
-									 </div>
-								</div>
-							</div>  
-						</div>  
-					</div> 
+				
 								
 				<!-- gallery -->
 				<div class="w3agile gallery"> 
@@ -148,6 +128,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- //brands -->
 				<!-- footer -->
 				<?php include 'footer.php' ?>
+				<br><br>
 			</div>
 		</div>
 	</div> 
